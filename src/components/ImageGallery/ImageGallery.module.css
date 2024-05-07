@@ -4,12 +4,12 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 8px;
-    margin: 6px;
+    margin: 8px;
     padding: 0;
 
 }
 
 .item {
-    width: calc((100% - 36px)/4);
+    width: calc((100% - 24px)/4);
     height: 240px;
 }

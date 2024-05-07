@@ -6,7 +6,7 @@ import './App.css';
 import { useEffect, useState, useRef } from 'react';
 import LoadMoreBtn from './components/LoadMoreBtn/LoadMoreBtn';
 import ImageModal from './components/ImageModal/ImageModal';
-/*import ErrorMessage from './components/ErrorMessage/ErrorMessage';*/
+import ErrorMessage from './components/ErrorMessage/ErrorMessage';
 
 
 export default function App() {
@@ -79,13 +79,16 @@ const closeModal = () => {
 
   return (
     <>
+     
       <SearchBar onSearch={handleSearch} />
       
       {error ? <ErrorMessage />: gallery.length > 0 && <ImageGallery onOpen={openModal} images={gallery} />}
       {spinner && <Loader />}
       {gallery.length > 11 && <LoadMoreBtn onRef={loadMoreButtonRef} onAdd={handleLoadMore} />}
       
-      <ImageModal open={modalIsOpen} selectedImage={selectedImage} onClose={closeModal} />
+        <ImageModal open={modalIsOpen} selectedImage={selectedImage} onClose={closeModal} />
+      
+      
     </>
   )
 }

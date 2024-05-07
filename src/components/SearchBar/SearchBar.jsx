@@ -6,6 +6,7 @@ import toast, { Toaster } from 'react-hot-toast';
 
 export default function SearchBar ({ onSearch })  {
     return (
+         <div className={css.container}>
         <header className={css.header}>
             <Formik
                 initialValues={{ query: '' }}
@@ -35,6 +36,7 @@ export default function SearchBar ({ onSearch })  {
         reverseOrder={false}/>
                 </Form>
             </Formik>
-        </header>
+            </header>
+            </div>
     );
 }
